@@ -38,6 +38,7 @@ const FormProduct = () => {
                 const user = await AuthService.getCurrentUser();
 
                 if (!user) {
+                    // Chuyển hướng người dùng đến trang đăng nhập nếu chưa đăng nhập
                     navigate('/login');
                     return;
                 }
@@ -58,7 +59,7 @@ const FormProduct = () => {
     useEffect(() => {
         axios
             .get('http://localhost:8080/admin/category/list', {
-                headers: header, 
+                headers: header, // Sử dụng biến header làm header trong yêu cầu API
             })
             .then((response) => {
                 setCategories(response.data);
@@ -70,7 +71,7 @@ const FormProduct = () => {
     useEffect(() => {
         if(id){
             axios.get(`http://localhost:8080/admin/products/${id}`, {
-            headers: header,
+            headers: header, // Sử dụng biến header làm header trong yêu cầu API
         })
             .then(response => {
                 const data = response.data;

@@ -35,7 +35,7 @@ const AddCategory = (props) => {
     useEffect(() => {
         axios.get(`http://localhost:8080/admin/category/${selectedCategoryId}`,
             {
-                headers: header, 
+                headers: header, // Sử dụng biến header làm header trong yêu cầu API
             })
             .then(response => {
                 const data = response.data;
@@ -51,7 +51,7 @@ const AddCategory = (props) => {
 
     useEffect(() => {
         axios.get('http://localhost:8080/admin/typeproduct/list', {
-            headers: header, 
+            headers: header, // Sử dụng biến header làm header trong yêu cầu API
         })
             .then(response => {
                 setTypeProductList(response.data);

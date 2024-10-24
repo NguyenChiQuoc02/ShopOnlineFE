@@ -30,7 +30,7 @@ const Main = () => {
 
             <Sider trigger={null} collapsible collapsed={collapsed}>
                 <div className="logo">
-                    <h4>ADMIN SHOP</h4>
+                    <h4>ADMIN</h4>
                 </div>
                 <Menu
                     theme="dark"

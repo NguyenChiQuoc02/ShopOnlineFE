@@ -27,7 +27,7 @@ const Color = () => {
                     return;
                 }
 
-                const response = await axios.get(`http://localhost:8080/admin/color?page=${currentPage}&size=${3}`,
+                const response = await axios.get(`http://localhost:8080/admin/color?page=${currentPage}&size=${5}`,
                     {
                         headers: header, // Sử dụng biến header làm header trong yêu cầu API
                     });
